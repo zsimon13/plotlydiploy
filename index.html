@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title >Bellybutton Biodiversity</title>
+  <!--adding a link to Bootstrap's content delivery network (CDN)-->
+  <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  
+/>
+<!--a link to our stylesheet under the link to Bootstrap's CDN-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+
+<body  style="background-image: url(https://www.pngmart.com/files/7/Bacteria-PNG-Transparent-Image.png); background-repeat: no-repeat; background-attachment: fixed;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(https://microbiologysociety.org/static/uploaded/edd0c38e-67b2-4cad-98691fe22fddfb78.png); background-size: cover;">
+        <h1 style="color:rgb(0, 0, 0);font-size:50px;font-weight:bold;">Belly Button Biodiversity Dashboard</h1>
+        <p style="color:rgb(0, 0, 0);font-size:30px;">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p style="color:rgb(56, 161, 231);font-size:20px;"> This bar graph shows the top 10 most abundant bacterial species (OTUs) present in each Test Subjects belly button. Select a "Test Subject ID NO." to see present species.  </p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p style="color:rgb(56, 161, 231);font-size:20px;"> This chart shows the number of times each test subject washes their belly button in a weeks time. Select a "Test Subject ID NO." to see washing frequency.  </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p style="color:rgb(56, 161, 231);font-size: 20px;"> This bubble chart shows amount of bacterial cultures found per each sample. Select a "Test Subject ID NO." to see bacterial distribution of each Test Subject.  </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="Static/charts.js"></script>
+
+</body>
+
+</html>
